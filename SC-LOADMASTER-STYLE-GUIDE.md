@@ -33,6 +33,7 @@ This style guide is a template to be filled in with exact values from your Figma
 **Background Colors:**
 
 - **Main Background:** `#000000`
+  - file: `background-image.png` oppacity set to 40%
   - Usage: Main screen background
   - Figma: **\*\***\_**\*\***
 
