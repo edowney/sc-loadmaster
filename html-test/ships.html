@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="A simple HTML5 boilerplate page" />
+    <meta name="author" content="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #scrollableWindow::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+<body>
+    <header
+        class="bg-[#164553] text-[#509CB2] text-3xl font-normal pt-[55px] text-center font-[Audiowide] tracking-wide h-[99px]">
+        SC-LOADMASTER
+    </header>
+    <div class="bg-center bg-[url('./images/background-image-40.png')] bg-cover bg-fixed h-[678px]">
+        <div id="scrollableWindow" class="ml-2 mr-2 overflow-y-auto h-full pb-[75px]"
+            style="scrollbar-width: none; -ms-overflow-style: none;">
+            <div id="page-title"
+                class="text-[#509CB2] tracking-[7px] font-[Inter] font-bold text-center p-4 text-2xl mb-5">
+                SHIPS</div>
+            <div class="flex gap-2 items-center mb-5">
+                <button id="add-ship-button" type="button">
+                    <img class="w-[20px] h-[20px]" src="./images/plus-circle.png">
+                </button>
+                <div id="add-ship" class="font-[Inter] text-white font-normal text-sm">
+                    <label for="ship-name">NAME</label>
+                    <input type="text" id="ship-name" name="ship-name"
+                        class="border-2 p-1 border-white rounded w-[137px] h-[30px] bg-gray-400 text-white"
+                        placeholder="Enter ship name">
+                    <label for="scu">CARGO SCU</label>
+                    <input type="text" id="scu" name="scu"
+                        class="border-2 p-1 border-white rounded w-[50px] h-[30px] bg-gray-400">
+                </div>
+            </div>
+            <div>
+                <table id="ship-table"
+                    class="table-fixed text-white w-full border-[2.5px] border-[#509CB2] text-left rounded font-[Inter] divide-y divide-[#509CB2] text-sm">
+                    <thead class="border-b-[2.5px] border-[#509CB2]">
+                        <tr>
+                            <th class="w-[20px]"></th>
+                            <th class="w-[200px]">NAME</th>
+                            <th class="w-[50px]">SCU</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y-[2.5px] divide-[#509CB2]">
+                        <tr class="odd:bg-[#164553] even:bg-gray-0">
+                            <td class="p-1">
+                                <img class="w-[20px] h-[20px]" src="./images/minus-circle.png">
+                            </td>
+                            <td>
+                                ARGO RAFT
+                            </td>
+                            <td>196</td>
+                        </tr>
+                        <tr class="odd:bg-[#164553] even:bg-gray-0">
+                            <td class="p-1">
+                                <img class="w-[20px] h-[20px]" src="./images/minus-circle.png">
+                            </td>
+                            <td>
+                                C2 HERCULES
+                            </td>
+                            <td>495</td>
+                        </tr>
+                        <tr class="odd:bg-[#164553] even:bg-gray-0">
+                            <td class="p-1">
+                                <img class="w-[20px] h-[20px]" src="./images/minus-circle.png">
+                            </td>
+                            <td>
+                                MISC HULL A
+                            </td>
+                            <td>64</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer class="bg-[#164553]
+             h-[75px]
+             fixed
+             inset-x-0
+             bottom-0
+             p-4">
+            <div class="flex gap-20 justify-center items-center">
+                <a href="contracts.html">
+                    <img src="./images/contract.png">
+                </a>
+                <a href="log.html">
+                    <img src="./images/log.png">
+                </a>
+                <img src="./images/ships.png">
+            </div>
+        </footer>
+</body>
+
+</html>
