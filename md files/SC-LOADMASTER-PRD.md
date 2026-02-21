@@ -858,8 +858,22 @@ cargo-container-badge-[SIZE]-[COUNT].png
 ```
 
 - `SIZE` = container size in SCU: `1`, `2`, `4`, `8`, or `16`
-- `COUNT` = number of containers needed: `1` through `15`
-- If COUNT is 16 or more, use the `q` variant: `cargo-container-badge-[SIZE]-q.png`
+- `COUNT` = number of containers needed
+
+**Image files are only provided for counts 1 through 15.** If the calculated count for a given container size is greater than 15, there is no numbered image file for it. In that case, the `q` variant MUST be used instead:
+
+```
+cargo-container-badge-[SIZE]-q.png
+```
+
+The `q` image displays a question mark in place of the count, indicating to the user that the quantity is too large to display precisely.
+
+**Selection logic (MUST follow exactly):**
+- If COUNT is between 1 and 15 (inclusive): use `cargo-container-badge-[SIZE]-[COUNT].png`
+- If COUNT is 16 or greater: use `cargo-container-badge-[SIZE]-q.png`
+- If COUNT is 0: do not display any badge for that size (Rule 22)
+
+**Example:** 17 containers of 1 SCU → COUNT is 17 → 17 > 15 → display `cargo-container-badge-1-q.png`
 
 **RULE 22:** Only display badge images for container sizes that have a count greater than zero. Do not render a badge for a size with zero containers.
 
